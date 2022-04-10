@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
+import 'package:news_project/value/colors.dart';
 
 final themeData = ThemeData(
     primarySwatch: Colors.blue,
@@ -38,10 +38,10 @@ final themeData = ThemeData(
         fontSize: 10,
       ),
     ),
-    scaffoldBackgroundColor: HexColor("#F5F9FD"),
+    scaffoldBackgroundColor: AppColors.appWhiteColor,
     floatingActionButtonTheme:
-        FloatingActionButtonThemeData(backgroundColor: HexColor("#0C54BE")),
-    appBarTheme: AppBarTheme(backgroundColor: HexColor("#0C54BE"),
+        FloatingActionButtonThemeData(backgroundColor:AppColors.appBlueColor),
+    appBarTheme: AppBarTheme(backgroundColor: AppColors.appBlueColor,
       titleTextStyle: const TextStyle(
         color: Colors.white,
         letterSpacing: 0.40,
@@ -51,9 +51,8 @@ final themeData = ThemeData(
     ),
     checkboxTheme: CheckboxThemeData(
       side: MaterialStateBorderSide.resolveWith(
-              (_) =>  BorderSide(width: 1, color: HexColor("#CED3DC"))),
+              (_) =>  BorderSide(width: 1, color: AppColors.appGreyColor)),
       fillColor: MaterialStateProperty.all(Colors.white),
       checkColor: MaterialStateProperty.all(Colors.blueAccent),
     ),
-    unselectedWidgetColor: HexColor("#CED3DC"),//grey
-);
+    unselectedWidgetColor: AppColors.appGreyColor);//grey
