@@ -49,7 +49,7 @@ class SearchViewModel extends ChangeNotifier {
   }
 
   getSearchResponse(String searchQuery) {
-    if(searchString!=searchQuery){
+    if(searchString!=searchQuery && searchQuery.isNotEmpty){
       searchedArticle.clear();
       pageState = PageState.loading;
       notifyListeners();

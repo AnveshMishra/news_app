@@ -46,6 +46,7 @@ class NewsArticleListViewModel extends ChangeNotifier {
       }
     }catch (e) {
       pageState = PageState.error;
+      errorString = e.toString();
     }
     notifyListeners();
   }
@@ -99,6 +100,7 @@ class NewsArticleListViewModel extends ChangeNotifier {
       }
     } catch (e) {
       pageState = PageState.error;
+      errorString = e.toString();
     }
     notifyListeners();
   }
@@ -115,7 +117,13 @@ class NewsArticleListViewModel extends ChangeNotifier {
   fetchFilteredData() {
     _clearData();
     isFilterApplied = true;
-    _fetchEveryThing(_getQueryParams());
+    if(selectedSource.isEmpty){
+      isFilterApplied = false;
+      _fetchTopHeadline(_getQueryParams());
+    }else{
+      _fetchEveryThing(_getQueryParams());
+    }
+
   }
 
   fetchDataBasedOnLocation() {
