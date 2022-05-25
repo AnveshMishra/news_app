@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_project/value/colors.dart';
 
 final themeData = ThemeData(
+  useMaterial3: true,
     primarySwatch: Colors.blue,
     textTheme: TextTheme(
       headline1: const TextStyle(

@@ -73,7 +73,7 @@ class TopHeadlineUI extends StatelessWidget {
                     children:  [
                       const Icon(Icons.location_on_sharp,size: 16,),
                       const SizedBox(height: 4,),
-                      Text("India",style: textTheme.headline4,)
+                      Text("${articleViewModel.selectedLocation.name}",style: textTheme.headline4,)
                     ],
                   )
                 ],
